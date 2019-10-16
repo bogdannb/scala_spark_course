@@ -69,6 +69,7 @@ object LearningScala1 {
   // Write some code that takes the value of pi, doubles it, and then prints it within a string with
   // three decimal places of precision to the right.
   // Just write your code below here; any time you save the file it will automatically display the results!
-   val doublePi = 2 * pi                          //> doublePi  : Double = 6.2831853
+  val doublePi = 2 * pi                           //> doublePi  : Double = 6.2831853
   println(f"Value is: $doublePi%.3f")             //> Value is: 6.283
+  
 }

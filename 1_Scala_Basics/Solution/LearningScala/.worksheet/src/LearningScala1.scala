@@ -56,12 +56,13 @@ object LearningScala1 {;import org.scalaide.worksheet.runtime.library.WorksheetS
   
   val picard: String = "Picard";System.out.println("""picard  : String = """ + $show(picard ));$skip(37); 
   val bestCaptain: String = "Picard";System.out.println("""bestCaptain  : String = """ + $show(bestCaptain ));$skip(46); 
-  val isBest: Boolean = picard == bestCaptain;System.out.println("""isBest  : Boolean = """ + $show(isBest ));$skip(304); 
+  val isBest: Boolean = picard == bestCaptain;System.out.println("""isBest  : Boolean = """ + $show(isBest ));$skip(303); 
   
   // EXERCISE
   // Write some code that takes the value of pi, doubles it, and then prints it within a string with
   // three decimal places of precision to the right.
   // Just write your code below here; any time you save the file it will automatically display the results!
-   val doublePi = 2 * pi;System.out.println("""doublePi  : Double = """ + $show(doublePi ));$skip(38); 
+  val doublePi = 2 * pi;System.out.println("""doublePi  : Double = """ + $show(doublePi ));$skip(38); 
   println(f"Value is: $doublePi%.3f")}
+  
 }

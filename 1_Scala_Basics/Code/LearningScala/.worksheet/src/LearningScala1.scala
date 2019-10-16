@@ -62,5 +62,5 @@ object LearningScala1 {;import org.scalaide.worksheet.runtime.library.WorksheetS
   // Write some code that takes the value of pi, doubles it, and then prints it within a string with
   // three decimal places of precision to the right.
   // Just write your code below here; any time you save the file it will automatically display the results!
- 
+
 }
