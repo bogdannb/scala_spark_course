@@ -13,7 +13,7 @@ Source for the Gemini course based on Big Data with Spark Streaming and Scala - 
 * Create Twitter Account - required for consuming Twitter data as a stream of data.
 
 ### 2. Scala Basics
-*Working examples for Scala
+* Working examples for Scala
 
 ### 3. Spark Streaming Concepts
 * Spark Streaming concepts
