@@ -1,7 +1,7 @@
 # Spark Streaming and Scala
-Source for the Gemini course based on Big Data with Spark Streaming and Scala - Hands On!
+Source code & presentations for the Gemini course (which is based on Big Data with Spark Streaming and Scala - Hands On!)
 
-## Struture
+## Structure
 
 ### 1. Setup
 * Setup environment:
