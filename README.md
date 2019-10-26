@@ -8,7 +8,8 @@ Source code & presentations for the Gemini course (which is based on Big Data wi
 1. Install JDK 8;
 2. Install Spark;
 3. Install Hadoop (winutils);
-4. Install Scala + Scala IDE;
+4. Install Scala;
+5. Install Intelijj + Scala plugin (we're not using Scala IDE).
 
 * Create Twitter Account - required for consuming Twitter data as a stream of data.
 
