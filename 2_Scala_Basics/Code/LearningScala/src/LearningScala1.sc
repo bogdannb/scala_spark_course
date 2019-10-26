@@ -1,23 +1,23 @@
 object LearningScala1 {
   // VALUES are immutable constants. You can't change them once defined.
-  val hello: String = "Bonjour!"                  //> hello  : String = Bonjour!
-  println(hello)                                  //> Bonjour!
-  
+  val hello: String = "Bonjour world!"            //> hello  : String = Bonjour world!
+  println(hello)                                  //> Bonjour world!
+
   // Notice how Scala defines things backwards from other languages - you declare the
   // name, then the type.
   
   // VARIABLES are mutable
-  var helloThere: String = hello                  //> helloThere  : String = Bonjour!
+  var helloThere: String = hello                  //> helloThere  : String = Bonjour world!
   helloThere = hello + " There!"
-  println(helloThere)                             //> Bonjour! There!
+  println(helloThere)                             //> Bonjour world! There!
   
   
   // One key objective of functional programming is to use immutable objects as often as possible.
   // Try to use operations that transform immutable objects into a new immutable object.
   // For example, we could have done the same thing like this:
-  val immutableHelloThere = hello + "There!"      //> immutableHelloThere  : String = Bonjour!There!
-  println(immutableHelloThere)                    //> Bonjour!There!
-  val moreStuff = immutableHelloThere + "yeah"    //> moreStuff  : String = Bonjour!There!yeah
+  val immutableHelloThere = hello + "There!"      //> immutableHelloThere  : String = Bonjour world!There!
+  println(immutableHelloThere)                    //> Bonjour world!There!
+  val moreStuff = immutableHelloThere + "yeah"    //> moreStuff  : String = Bonjour world!There!yeah
   
   // Some other types
   val numberOne : Int = 1                         //> numberOne  : Int = 1
