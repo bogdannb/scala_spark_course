@@ -6,9 +6,9 @@ Source code & presentations for the Gemini course (which is based on Big Data wi
 ### 1. Setup
 * Setup environment:
 1. Install JDK 8;
-2. Install Spark;
+2. Install Spark 2.4;
 3. Install Hadoop (winutils);
-4. Install Scala;
+4. Install Scala 2.11;
 5. Install Intelijj + Scala plugin (we're not using Scala IDE).
 
 * Create Twitter Account - required for consuming Twitter data as a stream of data.
