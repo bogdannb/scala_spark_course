@@ -1,14 +1,10 @@
-
-
 package com.sundogsoftware.sparkstreaming
 
-import org.apache.spark._
-import org.apache.spark.SparkContext._
 import org.apache.spark.streaming._
 import org.apache.spark.streaming.twitter._
-import org.apache.spark.streaming.StreamingContext._
-import org.apache.log4j.Level
 import Utilities._
+import org.apache.spark.streaming.dstream.DStream
+import twitter4j.Status
 
 /** Simple application to listen to a stream of Tweets and print them out */
 object PrintTweets {
@@ -28,13 +24,15 @@ object PrintTweets {
     setupLogging()
 
     // Create a DStream from Twitter using our streaming context
-    val tweets = TwitterUtils.createStream(ssc, None)
+    val tweets: DStream[Status] = TwitterUtils.createStream(ssc, None)
     
     // Now extract the text of each status update into RDD's using map()
-    val statuses = tweets.map(status => status.getText())
+    val statuses: DStream[String] = tweets.map(status => status.getText())
     
     // Print out the tweets
     statuses.print()
+
+    //EXERCISE: Print the language of each tweet
     
     // Kick it all off
     ssc.start()

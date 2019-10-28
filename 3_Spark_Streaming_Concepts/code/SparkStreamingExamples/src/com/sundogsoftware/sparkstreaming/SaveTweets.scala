@@ -1,11 +1,10 @@
 package com.sundogsoftware.sparkstreaming
 
-import org.apache.spark._
-import org.apache.spark.SparkContext._
 import org.apache.spark.streaming._
 import org.apache.spark.streaming.twitter._
-import org.apache.spark.streaming.StreamingContext._
 import Utilities._
+import org.apache.spark.streaming.dstream.DStream
+import twitter4j.Status
 
 /** Listens to a stream of tweets and saves them to disk. */
 object SaveTweets {
@@ -24,10 +23,10 @@ object SaveTweets {
     setupLogging()
 
     // Create a DStream from Twitter using our streaming context
-    val tweets = TwitterUtils.createStream(ssc, None)
+    val tweets: DStream[Status] = TwitterUtils.createStream(ssc, None)
     
     // Now extract the text of each status update into RDD's using map()
-    val statuses = tweets.map(status => status.getText())
+    val statuses: DStream[String] = tweets.map(status => status.getText())
     
     // Here's one way to just dump every partition of every stream to individual files:
     //statuses.saveAsTextFiles("Tweets", "txt")

@@ -1,10 +1,7 @@
 package com.sundogsoftware.sparkstreaming
 
-import org.apache.spark._
-import org.apache.spark.SparkContext._
 import org.apache.spark.streaming._
 import org.apache.spark.streaming.twitter._
-import org.apache.spark.streaming.StreamingContext._
 import Utilities._
 
 /** Listens to a stream of Tweets and keeps track of the most popular
@@ -53,7 +50,7 @@ object PopularHashtags {
     
     // Set a checkpoint directory, and kick it all off
     // I could watch this all day!
-    ssc.checkpoint("C:/checkpoint/")
+    ssc.checkpoint("temp/checkpoint/")
     ssc.start()
     ssc.awaitTermination()
   }  
