@@ -32,7 +32,8 @@ object PrintTweets {
     // Print out the tweets
     statuses.print()
 
-    //EXERCISE: Print the language of each tweet
+    //EXERCISE: Print the language of each tweet and hashtags (one per line)
+    //Hint: use status.getHashTagEntities() for hash tags
     
     // Kick it all off
     ssc.start()

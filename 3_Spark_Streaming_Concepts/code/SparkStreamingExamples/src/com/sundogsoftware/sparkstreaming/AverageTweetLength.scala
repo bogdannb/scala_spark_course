@@ -59,6 +59,8 @@ object AverageTweetLength {
             " Average: " + totalChars.get() / totalTweets.get())
       }
     })
+
+    //Exercise - keep track of the longest tweet counter encountered
     
     // Set a checkpoint directory, and kick it all off
     // I could watch this all day!

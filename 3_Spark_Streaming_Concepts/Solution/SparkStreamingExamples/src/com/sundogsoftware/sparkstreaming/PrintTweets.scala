@@ -10,7 +10,7 @@ import org.apache.spark.streaming.StreamingContext._
 import org.apache.log4j.Level
 import Utilities._
 import org.apache.spark.streaming.dstream.DStream
-import twitter4j.Status
+import twitter4j.{HashtagEntity, Status}
 
 /** Simple application to listen to a stream of Tweets and print them out */
 object PrintTweets {
@@ -34,13 +34,17 @@ object PrintTweets {
     
     // Now extract the text of each status update into RDD's using map()
     val statuses: DStream[String] = tweets.map(status => status.getText())
-    
+
     // Print out the tweets
     statuses.print()
 
-    //EXERCISE: Print the language of each tweet
+    //EXERCISE: Print the language of each tweet and hashtags (one per line)
+    //Hint: use status.getHashTagEntities() for hash tags
     val languages: DStream[String] = tweets.map(status => status.getLang);
     languages.print()
+
+    val contributors: DStream[String] = tweets.flatMap(status => status.getHashtagEntities).map(tag => tag.getText)
+    contributors.print()
     
     // Kick it all off
     ssc.start()

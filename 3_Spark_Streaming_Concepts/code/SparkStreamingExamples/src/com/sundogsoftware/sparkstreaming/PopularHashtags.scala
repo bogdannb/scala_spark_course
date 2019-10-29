@@ -46,8 +46,10 @@ object PopularHashtags {
     val sortedResults = hashtagCounts.transform(rdd => rdd.sortBy(x => x._2, false))
     
     // Print the top 10
-    sortedResults.print
-    
+    sortedResults.print()
+
+    //EXERCISE - modify the code to determine the most popular word
+
     // Set a checkpoint directory, and kick it all off
     // I could watch this all day!
     ssc.checkpoint("temp/checkpoint/")
