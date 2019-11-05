@@ -87,7 +87,7 @@ println(archersShip)
 // one as you go. Then, do it again by using a filter function on the list instead.
 
 //EXERCISE
-// Given a list of lines split it into an array of words
+// Given a list of lines split it into a list of words
 // Also count the appearance of each word
 val lines = List("This is the first line", "This is the second line", "This is the third line")
 
