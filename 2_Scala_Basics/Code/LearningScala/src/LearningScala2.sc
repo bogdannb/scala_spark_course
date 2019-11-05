@@ -1,5 +1,4 @@
-//object LearningScala2 {
-//  // Flow control
+  // Flow control
   // If / else syntax
   if (1 > 3) println("Impossible!") else println("The world makes sense.")
   
@@ -47,4 +46,3 @@
 	 // So, the result should be 0, 1, 1, 2, 3, 5, 8, 13, 21, 34
 	 
 	   
-//}

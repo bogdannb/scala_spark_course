@@ -34,11 +34,13 @@
  
  
  // Iterating though a list
- for (ship <- shipList) {println(ship)}
+ for (ship <- shipList) { println(ship) }
  
  // Let's apply a function literal to a list! map() can be used to apply any function to every item in a collection.
 val backwardShips = shipList.map( (ship: String) => {ship.reverse})
-for (ship <- backwardShips) {println(ship)}
+for (ship <- backwardShips) {
+  println(ship)
+}
                                                   
 // reduce() can be used to combine together all the items in a collection using some function.
 val numberList = List(1, 2, 3, 4, 5)
@@ -84,9 +86,13 @@ println(archersShip)
 // because 9 is evenly divisible by 3.) Do this first by iterating through all the items in the list and testing each
 // one as you go. Then, do it again by using a filter function on the list instead.
 
+//EXERCISE
+// Given a list of lines split it into an array of words
+// Also count the appearance of each word
+val lines = List("This is the first line", "This is the second line", "This is the third line")
+
+
 // That's enough for now!
 // There is MUCH more to learn about Scala. We didn't cover many other collection types, including mutable collections.
 // And we didn't even touch on object-oriented Scala. The book "Learning Scala" from O'Reilly is great if you want to
 // go into more depth - but you've got enough to get through this course for now.
-
-//}
