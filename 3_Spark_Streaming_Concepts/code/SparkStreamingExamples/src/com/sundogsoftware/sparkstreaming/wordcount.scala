@@ -30,6 +30,9 @@ object wordcount {
       for ((word, count) <- sample) {
         println(word + " " + count)
       }
+	  
+	  //EXERCISE - print all the lines that have the word "Basics" into them
+	 
       
       sc.stop()
     }  

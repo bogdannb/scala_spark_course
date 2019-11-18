@@ -23,13 +23,16 @@ object wordcount {
       val lowerCaseWords = words.map(word => word.toLowerCase())
       // Count up the occurence of each unique wordv - here the RDD actually gets evaluated.
       val wordCounts = lowerCaseWords.countByValue()
-      
+
       // Print the first 20 results
       val sample = wordCounts.take(20)
       
       for ((word, count) <- sample) {
         println(word + " " + count)
       }
+
+      val pairs = input.map(s => (s, 1))
+      val counts = pairs.reduceByKey((a, b) => a + b)
       
       sc.stop()
     }  
