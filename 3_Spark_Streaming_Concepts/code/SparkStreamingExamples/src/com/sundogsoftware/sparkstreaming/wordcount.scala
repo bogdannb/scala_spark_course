@@ -5,7 +5,7 @@ import org.apache.spark._
 /** Create a RDD of lines from a text file, and keep count of
  *  how often each word appears.
  */
-object wordcount {
+object WordCount {
   
   def main(args: Array[String]) {
     
@@ -16,9 +16,9 @@ object wordcount {
       val sc = new SparkContext(conf)
 
       // Create a RDD of lines of text in our book
-      val input = sc.textFile("book.txt")
+      val lines = sc.textFile("book.txt")
       // Use flatMap to convert this into an rdd of each word in each line
-      val words = input.flatMap(line => line.split(' '))
+      val words = lines.flatMap(line => line.split(' '))
       // Convert these words to lowercase
       val lowerCaseWords = words.map(word => word.toLowerCase())
       // Count up the occurence of each unique wordv - here the RDD actually gets evaluated.
@@ -31,9 +31,11 @@ object wordcount {
         println(word + " " + count)
       }
 	  
-	  //EXERCISE - print all the lines that have the word "Basics" into them
-	 
-      
+	  //EXERCISE - print all the lines that have the word "Basics" (ignoring case) into them
+
+    //EXERCISE - count all the lines that have the word "Basics" (ignoring case) into them
+
+
       sc.stop()
     }  
 }
