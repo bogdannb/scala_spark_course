@@ -29,6 +29,11 @@ object SparkSqlStart2 {
     sqlDF2.show()
 
     //TODO: exercise - average age of people
+    val sqlDF3 = spark.sql("SELECT avg(age) AS average_age FROM people")
+    sqlDF3.show()
+
     //TODO: exercise - count people by age
+    val sqlDF4 = spark.sql("SELECT count(*), age FROM people GROUP BY age")
+    sqlDF4.show()
   }
 }

@@ -85,6 +85,10 @@ object StructuredStreaming {
       // Start the streaming query, dumping results to the console. Use "complete" output mode because we are aggregating
       // (instead of "append").
       val query = windowed.writeStream.outputMode("complete").format("console").start()
+
+
+     //TODO : exercise do the same grouping by agent or by ip
+
       
       // Keep going until we're stopped.
       query.awaitTermination()
