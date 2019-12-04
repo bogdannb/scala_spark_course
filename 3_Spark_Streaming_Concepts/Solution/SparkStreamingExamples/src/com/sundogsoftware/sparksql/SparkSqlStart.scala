@@ -30,5 +30,6 @@ object SparkSqlStart {
     df.filter($"age" > 21).show()
 
     // TODO: exercise - count people by age (HINT: use groupBy() first)
+    df.groupBy("age").count().show()
   }
 }
